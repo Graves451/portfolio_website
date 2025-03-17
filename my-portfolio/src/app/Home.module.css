@@ -1,0 +1,190 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #1e1e1e; /* Dark gray background */
+  color: #e0e0e0; /* Light text color */
+}
+
+/* Left Sidebar */
+.sidebar {
+  width: 250px; /* Fixed width for the sidebar */
+  padding: 20px;
+  background-color: #2a2a2a; /* Slightly lighter dark gray for the sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for the sidebar */
+}
+
+/* Profile Picture (Headshot) */
+.profilePic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Circular profile picture */
+  margin-bottom: 20px;
+}
+
+/* Navigation Links */
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  margin: 15px 0;
+}
+
+.nav a {
+  color: #e0e0e0; /* Light text color */
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.nav a:hover {
+  color: #4dabf7; /* Light blue on hover */
+  text-decoration: underline;
+}
+
+/* Icons Section */
+.icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.icons a {
+  color: #e0e0e0; /* Light text color */
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  color: #4dabf7; /* Light blue on hover */
+}
+
+/* Main Content */
+.mainContent {
+  flex: 1;
+  padding: 40px 40px 40px 20px; /* Reduced left padding to bring content closer to the sidebar */
+  max-width: 1000px; /* Wider main content */
+  margin-left: 20px; /* Move content closer to the sidebar */
+}
+
+/* About Me Section - Bubble/Card Style */
+.about {
+  background-color: #2a2a2a; /* Slightly lighter dark gray for the bubble */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for the bubble */
+  padding: 30px;
+  text-align: center;
+  color: #e0e0e0; /* Light text color */
+}
+
+.section {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #1e1e1e; /* Match the main background */
+  color: #e0e0e0; /* Light text color */
+}
+
+.section h2 {
+  border-bottom: 2px solid #444; /* Darker border for contrast */
+  padding-bottom: 10px;
+}
+
+.article {
+  margin-bottom: 20px;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #2a2a2a; /* Slightly lighter dark gray for the footer */
+  color: #e0e0e0; /* Light text color */
+  width: 100%;
+  margin-top: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for the footer */
+}
+
+/* Link Styling - Scoped to a class */
+.link {
+  color: #4dabf7; /* Light blue for links */
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.projectBubble {
+    position: relative;
+    width: 100%;
+    border-radius: 12px; /* Rounded corners */
+    overflow: hidden; /* Ensures the image doesn't break out */
+    background-color: #2a2a2a; /* Slightly lighter dark gray for the bubble */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for the card */
+    display: flex;
+    flex-direction: column;
+  }
+  
+.projectImage {
+width: 100%;
+height: 200px; /* Adjust height for better fit */
+object-fit: cover; /* Ensures images scale without stretching */
+border-top-left-radius: 12px; /* Rounded top corners */
+border-top-right-radius: 12px;
+  }
+
+.projectContent {
+    padding: 15px;
+    color: #e0e0e0; /* Light text */
+    text-align: left;
+  }
+  
+
+  .projectsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1000px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto; /* Center the grid */
+    padding: 20px;
+  }
+  
+  .projectBubble {
+    background-color: #2a2a2a; /* Slightly lighter dark gray */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Ensures images fit properly */
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .projectImage {
+    width: 100%;
+    height: 260px; /* Increase height for taller image */
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  .projectContent {
+    flex-grow: 1; /* Makes content fill available space */
+    padding: 20px;
+    color: #e0e0e0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures even spacing */
+  }
+  

@@ -8,10 +8,10 @@ export default function Home() {
       <div className={styles.sidebar}>
         {/* Profile Picture (Headshot) */}
         <Image
-          src="/profile.jpg" // Replace with the path to your headshot image
+          src="/profile.jpeg" // Replace with the path to your headshot image
           alt="Your Name"
-          width={150}
-          height={150}
+          width={200}
+          height={200}
           className={styles.profilePic}
         />
 
@@ -36,42 +36,30 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className={styles.mainContent}>
-        {/* About Section */}
-        <section id="about" className={styles.about}>
-          <h2>About Me</h2>
-          <p>
-            Hello! I'm Your Name, a [your profession or role]. I specialize in [your skills or expertise]. 
-            This is my personal website where I share my thoughts, projects, and more. I have over 10 years 
-            of experience working in [your industry or field], and I’m passionate about solving complex 
-            problems using technology and data.
-          </p>
-          <p>
-            My journey began with a degree in [your degree] from [your university]. Since then, I’ve worked 
-            with a variety of companies, helping them leverage data and machine learning to drive business 
-            outcomes. I’ve worked in domains such as banking, cybersecurity, environmental science, and 
-            weather forecasting, and I enjoy the challenge of applying data science to real-world problems.
-          </p>
-          <p>
-            In my current role at [your company], I focus on building scalable machine learning platforms 
-            that enable data scientists to iterate quickly and deliver value. I believe that the key to 
-            successful machine learning projects lies in shortening feedback loops and empowering teams to 
-            focus on their core problems, rather than getting bogged down by infrastructure.
-          </p>
-          <p>
-            Outside of work, I’m passionate about [your hobbies or interests]. Whether it’s [hobby 1], 
-            [hobby 2], or [hobby 3], I’m always looking for ways to learn and grow. I also enjoy writing 
-            about my experiences and sharing insights on topics like [topic 1], [topic 2], and [topic 3].
-          </p>
-          <p>
-            If you’d like to connect or collaborate, feel free to reach out! You can find me on 
-            <a href="https://www.linkedin.com/in/frank-peng-6bb643223/" className={styles.link}> LinkedIn</a>, 
-            <a href="https://github.com/Graves451" className={styles.link}> GitHub</a>, or 
-            <a href="https://twitter.com/yourusername" className={styles.link}> Twitter</a>. 
-            I’m always open to interesting conversations and new opportunities.
-          </p>
-        </section>
+            {/* Main Content */}
+            <div className={styles.mainContent}>
+{/* About Section */}
+<section id="about" className={styles.about}>
+  <h2>Hey - I'm Qiyuan Peng 🚀</h2>
+  <p>
+    I'm a software engineer and a Computer Science & Statistics student at the University of Toronto, with a deep interest in how intelligent systems can be designed to solve real-world problems. I’m especially fascinated by the blend of algorithmic precision and practical usability — building tools that not only work well under the hood but also make people’s lives tangibly better.
+  </p>
+  <p>
+    My projects have spanned everything from music taste matching using neural embeddings, to AI-driven study tools that adapt to user needs, to gamified platforms that make learning and debating more engaging. Across all of them, one theme remains: I care deeply about crafting systems that feel thoughtful, efficient, and intuitive — systems that don’t just function, but resonate.
+  </p>
+  <p>
+    During my recent internship at Kaboo Financial, I worked alongside experienced engineers to improve infrastructure, streamline testing workflows, and refine backend performance. I learned the value of scalable architecture and clean design in high-stakes environments, and discovered that I love contributing to teams where ideas move fast and every commit counts. Whether it's designing robust data schemas or tracking down edge-case bugs, I find a lot of satisfaction in the details.
+  </p>
+  <p>
+    I'm particularly drawn to work at the intersection of machine learning, personalization, and human–computer interaction — places where algorithms meet behavior, and where code can shape experiences in subtle, powerful ways. I thrive in roles where there's space to think deeply, collaborate openly, and build things that challenge the status quo.
+  </p>
+  <p>
+    When I’m not coding, I’m usually breaking down how AI could change strategy games, reading up on game theory, or experimenting with new datasets for fun. I see tech not just as a job, but as a craft — one that rewards curiosity, clarity, and relentless iteration.
+  </p>
+  <p>
+    If you're working on something ambitious — whether it’s a product, a research idea, or an experimental concept that doesn’t quite fit the mold — I’d love to connect.
+  </p>
+</section>
 
         {/* Contact Section */}
         <section id="contact" className={styles.section}>

@@ -123,3 +123,42 @@ a:hover {
   flex-direction: column;
   justify-content: space-between; /* Ensures even spacing */
 }
+
+/* Main Content */
+.mainContent {
+  flex: 1;
+  padding: 40px 40px 40px 20px; /* Reduced left padding to bring content closer to the sidebar */
+  max-width: 1000px; /* Wider main content */
+  margin-left: 20px; /* Move content closer to the sidebar */
+}
+.projectBackgroundContainer {
+  width: 100%; /* Full width of the parent container */
+  height: 400px; /* Adjust height for better visual impact */
+  object-fit: cover; /* Ensures the image scales without stretching */
+  border-radius: 12px 12px 0 0; /* Only round the top corners */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-size: cover; /* Ensures the image fills the container */
+  margin: 0; /* Remove any default margin */
+}
+
+.about {
+  background-color: #2a2a2a; /* Slightly lighter dark gray for the bubble */
+  border-radius: 12px; /* Match the image's border-radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for the bubble */
+  padding: 0; /* Remove padding to make the image fit tightly */
+  text-align: left;
+  color: #e0e0e0; /* Light text color */
+  overflow: hidden; /* Ensure content stays within the container */
+}
+
+.aboutContent {
+  padding: 10px 40px; /* Add padding for both vertical and horizontal spacing */
+}
+
+.about h2 {
+  font-size: 30px; /* Increase the font size */
+  font-weight: bold; /* Optional: Make it bold */
+  margin: 20px 0; /* Add spacing below the heading */
+  color: #ffffff; /* Optional: Ensure the text color stands out */
+}

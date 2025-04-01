@@ -4,10 +4,10 @@ export default function Projects() {
   // Example projects data (replace with dynamic data fetching later)
   const projects = [
     {
-      slug: "project-1",
-      title: "Project 1",
+      slug: "matchify",
+      title: "🎧 Building Matchify: Connecting People Through Music",
       description: "This is a description of Project 1. It’s about...",
-      link: "/projects/project-1",
+      link: "/projects/matchify",
       image: "/image.png",
     },
     {

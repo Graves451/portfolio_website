@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {/* Sidebar */}
           <div className="sidebar">
             <Image
-              src="/profile.jpeg"
+              src="/profile.jpg"
               alt="Your Name"
               width={200}
               height={200}
@@ -32,8 +32,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
             <nav>
               <ul className="nav">
-                <li><a href="/about" className="link">About</a></li>
-                <li><a href="/blog" className="link">Blog</a></li>
+                <li><a href="/" className="link">Home</a></li>
+                <li><a href="/resume" className="link">Resume</a></li>
                 <li><a href="/projects" className="link">Projects</a></li>
                 <li><a href="/contact" className="link">Contact</a></li>
               </ul>

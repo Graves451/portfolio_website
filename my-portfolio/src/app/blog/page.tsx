@@ -20,39 +20,6 @@ export default function Projects() {
 
   return (
     <div className={styles.container}>
-      {/* Left Sidebar */}
-      <div className={styles.sidebar}>
-        {/* Profile Picture (Headshot) */}
-        <img
-          src="/profile.jpg" // Replace with the path to your headshot image
-          alt="Your Name"
-          className={styles.profilePic}
-        />
-
-        {/* Navigation Links */}
-        <nav>
-          <ul className={styles.nav}>
-            <li><a href="/" className={styles.link}>Home</a></li>
-            <li><a href="/blog" className={styles.link}>Blog</a></li>
-            <li><a href="/projects" className={styles.link}>Projects</a></li>
-            <li><a href="/contact" className={styles.link}>Contact</a></li>
-          </ul>
-        </nav>
-
-        {/* Icons under the headshot */}
-        <div className={styles.icons}>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-github"></i> {/* GitHub icon */}
-          </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin"></i> {/* LinkedIn icon */}
-          </a>
-          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-twitter"></i> {/* Twitter icon */}
-          </a>
-        </div>
-      </div>
-
       {/* Main Content */}
       <div className={styles.mainContent}>
         {/* Projects Section */}

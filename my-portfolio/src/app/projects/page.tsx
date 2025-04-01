@@ -1,69 +1,47 @@
-import styles from "../Home.module.css";
-import Link from "next/link";
-import Image from "next/image";
-
-interface Project {
-  slug: string;
-  title: string;
-  description: string;
-  link: string;
-  image: string;
-}
-
-const projects: Project[] = [
-  {
-    slug: "project-1",
-    title: "Project 1",
-    description: "This is a description of Project 1. It’s about...",
-    link: "#",
-    image: "/image.png",
-  },
-  {
-    slug: "project-2",
-    title: "Project 2",
-    description: "This is a description of Project 2. It’s about...",
-    link: "#",
-    image: "/image.png",
-  },
-  {
-    slug: "project-3",
-    title: "Project 3",
-    description: "This is a description of Project 3. It’s about...",
-    link: "#",
-    image: "/image.png",
-  },
-  {
-    slug: "project-4",
-    title: "Project 4",
-    description: "This is a description of Project 4. It’s about...",
-    link: "#",
-    image: "/image.png",
-  },
-];
+import Link from 'next/link';
 
 export default function Projects() {
-  return (
-    <div className={styles.container}>
+  // Example projects data (replace with dynamic data fetching later)
+  const projects = [
+    {
+      slug: "project-1",
+      title: "Project 1",
+      description: "This is a description of Project 1. It’s about...",
+      link: "/projects/project-1",
+      image: "/image.png",
+    },
+    {
+      slug: "project-2",
+      title: "Project 2",
+      description: "This is a description of Project 2. It’s about...",
+      link: "/projects/project-2",
+      image: "/image.png",
+    },
+    {
+      slug: "project-3",
+      title: "Project 3",
+      description: "This is a description of Project 3. It’s about...",
+      link: "/projects/project-3",
+      image: "/image.png",
+    },
+  ];
 
+  return (
+    <div className="container">
       {/* Main Content */}
-      <div className={styles.mainContent}>
-        <h2>Projects</h2>
-        <div className={styles.projectsContainer}>
+      <div className="mainContent">
+        {/* Projects Section */}
+        <section className="projectsContainer">
           {projects.map((project) => (
-            <div key={project.slug} className={styles.projectBubble}>
-              {/* Project Image */}
-              <Image
+            <div key={project.slug} className="projectBubble">
+              <img
                 src={project.image}
                 alt={project.title}
-                width={600}
-                height={180}
-                className={styles.projectImage}
+                className="projectImage"
               />
-
-              {/* Project Content */}
-              <div className={styles.projectContent}>
+              <div className="projectContent">
                 <h3>
-                  <Link href={project.link} className={styles.link}>
+                  <Link href={project.link} className="link">
                     {project.title}
                   </Link>
                 </h3>
@@ -71,7 +49,7 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
+        </section>
       </div>
     </div>
   );

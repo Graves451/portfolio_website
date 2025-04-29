@@ -8,7 +8,7 @@ export default function Projects() {
       title: "🎧 Building Matchify: Connecting People Through Music",
       description: "This is a description of Project 1. It’s about...",
       link: "/projects/matchify",
-      image: "/image.png",
+      image: "/matchify.png",
     },
     {
       slug: "project-2",

@@ -16,7 +16,7 @@ interface ProjectContent {
     {
       slug: "matchify",
       title: "🎧 Building Matchify: Connecting People Through Music",
-      title_image: "/image.png",
+      title_image: "/Home1.png",
       description: [
         {
           type: "paragraph",
@@ -28,24 +28,41 @@ interface ProjectContent {
         },
         {
           type: "image",
-          content: "/image1.png",
+          content: "/matchify-suggestion.png",
         },
         {
           type: "paragraph",
-          content: `Matchify is a social networking app that connects users through shared music preferences. After logging in and linking a Spotify account, Matchify begins analyzing your listening data — everything from top tracks and favorite genres to your most played artists.`,
-        },
-        {
-          type: "image",
-          content: "/image2.png",
+          content: `My main focus on the project was designing and implementing the backend logic for Matchify’s recommendation system. At the heart of this system is the idea of representing each user's musical taste as a high-dimensional embedding — a vector that captures the nuances of their top tracks, artists, and genres. Initially, we explored training our own neural network to learn these embeddings, aiming to replicate the kind of semantic richness found in Spotify’s own recommendation engine. However, this quickly proved to be unfeasible. Training was computationally expensive, and despite experimenting with different architectures and loss functions, we struggled to get accuracy above 70%. We believe this was largely due to limited training data, underpowered infrastructure, and potentially noisy input labels. Given these challenges, we made the decision to use Spotify’s precomputed audio feature embeddings instead, which gave us reliable, high-quality vectors without the overhead of training from scratch.`,
         },
         {
           type: "paragraph",
-          content: `Using this information, the platform recommends compatible friends whose musical tastes align with yours, helping you build connections through something as personal as your playlist. It also suggests local music events that fit your interests, and offers an in-app chat to share songs, discuss artists, and create a music-rooted social circle.`,
+          content: `With user embeddings in place, our initial implementation used a straightforward cosine similarity approach to generate match recommendations. For each user, we calculated the similarity score between their embedding vector and every other user’s in the system. While this method was effective in capturing nuance and musical alignment, it had an inherent scalability issue: the matching process was O(n) with respect to the user base size. As the number of users grew, the system quickly became too slow for real-time performance, especially under concurrent load.`,
         },
         {
-          type: "image",
-          content: "/image3.png",
+          type: "paragraph",
+          content: `Recognizing this bottleneck, I redesigned the recommendation pipeline to introduce a clustering-based optimization layer. Instead of comparing every user to the entire population, I used K-Means clustering to pre-segment the user base into coherent groups based on their musical embedding vectors. These clusters were then persisted in the database alongside each user’s record, allowing us to efficiently constrain the similarity search to only users within the same cluster.`,
         },
+        {
+          type: "paragraph",
+          content: `This change dramatically reduced computational overhead and response times. In fact, match quality often improved as well — because limiting comparisons to users within the same cluster helped filter out irrelevant matches from the start. By narrowing the search space to musically similar peers, we reduced noise and surfaced more meaningful connections. This optimization transformed our recommendation engine from a brute-force prototype into a system capable of delivering fast, high-quality results at scale, and played a critical role in making Matchify production-ready.`,
+        },
+        {
+          type: "paragraph",
+          content: `Looking back on my time working on Matchify, one of the biggest takeaways was the importance of balancing algorithmic accuracy with real-world performance constraints. It’s one thing to build something that works in theory — it’s another to build something that works fast, reliably, and at scale. Optimizing the matching algorithm forced me to deeply consider tradeoffs between brute-force approaches and smarter approximations. In particular, moving from global vector similarity to cluster-based comparisons taught me how architectural decisions can radically impact the usability of a product.`,
+        },
+        {
+          type: "paragraph",
+          content: `Just as valuable as the technical learning was the experience of collaborating on a fast-moving product with real users in mind. Building with a team, iterating quickly, and constantly communicating helped me grow as an engineer and as a teammate. Whether it was debugging a broken OAuth flow or tuning our database indexes to speed up match queries, every challenge we faced required both autonomy and coordination — the exact kind of environment I thrive in.`,
+        },
+        {
+          type: "paragraph",
+          content: `Now that my role on the project has wrapped up, I’m really excited to see where the rest of the team takes Matchify — especially as new frontend features and social tools come to life. On my end, this project sparked a deeper interest in recommendation systems, user embeddings, and scalable ML infrastructure. I’m now diving into topics like approximate nearest neighbor search (ANN), vector databases like Pinecone and Faiss, and more advanced user modeling techniques. I’m especially interested in how these systems can be applied beyond music — in gaming, learning, and community-building platforms where smart, meaningful connection is everything.`,
+        },
+        {
+          type: "paragraph",
+          content: `Matchify reminded me that great technology doesn’t have to be complex — it just has to be thoughtful, well-built, and rooted in something people care about. Music gave us the perfect lens for that, and I’m proud of the impact we made.`,
+        },
+
       ],
     },
   ];

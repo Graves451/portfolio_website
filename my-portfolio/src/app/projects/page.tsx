@@ -11,11 +11,11 @@ export default function Projects() {
       image: "/matchify.png",
     },
     {
-      slug: "project-2",
-      title: "Project 2",
+      slug: "food-type-prediction",
+      title: "🍕 End-to-End Food Type Prediction Using Pure Python",
       description: "This is a description of Project 2. It’s about...",
-      link: "/projects/project-2",
-      image: "/image.png",
+      link: "/projects/food-type-prediction",
+      image: "/matchify.png",
     },
     {
       slug: "project-3",

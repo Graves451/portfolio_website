@@ -8,21 +8,21 @@ export default function Projects() {
       title: "🎧 Building Matchify: Connecting People Through Music",
       description: "This is a description of Project 1. It’s about...",
       link: "/projects/matchify",
-      image: "/matchify.png",
+      image: "/Home1.png",
     },
     {
-      slug: "food-type-prediction",
+      slug: "classmate",
+      title: "classmate",
+      description: "This is a description of Project 3. It’s about...",
+      link: "/projects/classmate",
+      image: "/ryko_home.png",
+    },
+    {
+      slug: "ml-food-classifier",
       title: "🍕 End-to-End Food Type Prediction Using Pure Python",
       description: "This is a description of Project 2. It’s about...",
-      link: "/projects/food-type-prediction",
-      image: "/matchify.png",
-    },
-    {
-      slug: "project-3",
-      title: "Project 3",
-      description: "This is a description of Project 3. It’s about...",
-      link: "/projects/project-3",
-      image: "/image.png",
+      link: "/projects/ml-food-classifier",
+      image: "/food-classifer.png",
     },
   ];
 
